@@ -5,9 +5,54 @@
     <title>Title</title>
 </head>
 <body>
-{% block content %}
-  <h1>{{ product.contract_end_date }}</h1>
-  <p>Высота: {{ product.height }} - Ширина: {{ product.width }} - Длина: {{ product.length }} - Вес: {{ product.weight }} - Дата прибытия: {{ product.arrival_date }} - Номер контракта: {{ product.contract_number }} - Имя: {{ product.client.name }} - Конец срока: {{ product.end_date }} - Номер полки: {{ product.shelf.number }} - Позиция: {{ product.position }}</p>
+{#сделать по центру и сделать кнопку назад на страницу с товарами и сделать кнопку редактировать на страницу редактирования товара и сделать кнопку удалить на страницу удаления товара и сделать кнопку добавить на страницу добавления товара #}
+
+{#  <h1>{{ product.contract_end_date }}</h1>#}
+    <table>
+  <tbody>
+    <tr>
+      <td>Высота</td>
+      <td>{{ product.height }}</td>
+    </tr>
+    <tr>
+      <td>Ширина</td>
+      <td>{{ product.width }}</td>
+    </tr>
+    <tr>
+      <td>Длина</td>
+      <td>{{ product.length }}</td>
+    </tr>
+    <tr>
+      <td>Вес</td>
+      <td>{{ product.weight }}</td>
+    </tr>
+    <tr>
+      <td>Дата прибытия</td>
+      <td>{{ product.arrival_date }}</td>
+    </tr>
+    <tr>
+      <td>Номер контракта</td>
+      <td>{{ product.contract_number }}</td>
+    </tr>
+    <tr>
+      <td>Имя</td>
+      <td>{{ product.client.name }}</td>
+    </tr>
+    <tr>
+      <td>Конец срока</td>
+      <td>{{ product.contract_end_date }}</td>
+    </tr>
+    <tr>
+      <td>Номер полки</td>
+      <td>{{ product.shelf.number }}</td>
+    </tr>
+    <tr>
+      <td>Позиция</td>
+      <td>{{ product.position }}</td>
+    </tr>
+    </tbody>
+    </table>
+{#  <p>Высота: {{ product.height }} - Ширина: {{ product.width }} - Длина: {{ product.length }} - Вес: {{ product.weight }} - Дата прибытия: {{ product.arrival_date }} - Номер контракта: {{ product.contract_number }} - Имя: {{ product.client.name }} - Конец срока: {{ product.contract_end_date }} - Номер полки: {{ product.shelf.number }} - Позиция: {{ product.position }}</p>#}
 {% endblock %}
 </body>
 </html>
