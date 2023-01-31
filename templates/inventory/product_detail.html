@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+  <h1>{{ product.contract_end_date }}</h1>
+  <p>Высота: {{ product.height }} - Ширина: {{ product.width }} - Длина: {{ product.length }} - Вес: {{ product.weight }} - Дата прибытия: {{ product.arrival_date }} - Номер контракта: {{ product.contract_number }} - Имя: {{ product.client.name }} - Конец срока: {{ product.end_date }} - Номер полки: {{ product.shelf.number }} - Позиция: {{ product.position }}</p>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table>
+  <thead>
+    <tr>
+{#      <th>ID</th>#}
+      <th>Номер контракта</th>
+        <th>Клиент</th>
+        <th>Дата прибытия</th>
+        <th>Дата окончания контракта</th>
+        <th>Высота</th>
+        <th>Длина</th>
+        <th>Ширина</th>
+        <th>Вес</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in products %}
+    <tr>
+{#      <td>{{ product.id }}</td>#}
+        <td><a href="{% url 'product_detail' product.pk %}">{{ product.contract_number }}</a></td>
+        <td>{{ product.client }}</td>
+        <td>{{ product.arrival_date }}</td>
+        <td>{{ product.contract_end_date }}</td>
+        <td>{{ product.height }}</td>
+        <td>{{ product.length }}</td>
+        <td>{{ product.width }}</td>
+        <td>{{ product.weight }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

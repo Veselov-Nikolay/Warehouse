@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+        <th>ID</th>
+      <th>Location</th>
+      <th>Number of Storage Places</th>
+      <th>Height</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Maximum Load</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for shelf in shelves %}
+    <tr>
+        <td><a href="{% url 'shelf_detail' shelf.pk %}">{{ shelf.id }}</a></td>
+      <td>{{ shelf.room }}</td>
+      <td>{{ shelf.number }}</td>
+      <td>{{ shelf.height }}</td>
+      <td>{{ shelf.width }}</td>
+      <td>{{ shelf.length }}</td>
+      <td>{{ shelf.max_load }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>
