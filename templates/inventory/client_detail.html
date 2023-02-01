@@ -24,7 +24,7 @@
         <td>
     <ul>
 {% for product in products %}
-   <li>  {{ product.name }} </li>
+    <li> <a href="{% url 'product_detail' product.pk %}"> {{ product.name }} </a></li>
 {% endfor %}
 </ul>
 
