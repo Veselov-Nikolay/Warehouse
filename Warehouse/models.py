@@ -42,6 +42,7 @@ class Client(models.Model):
         ordering = ['name']
 
 class Product(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Название товара')
     height = models.FloatField(verbose_name='Высота')
     width = models.FloatField(verbose_name='Ширина')
     length = models.FloatField(verbose_name='Длина')
@@ -54,7 +55,7 @@ class Product(models.Model):
     position = models.PositiveIntegerField(verbose_name='Позиция')
 
     def __str__(self):
-        return self.contract_number
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Товары'

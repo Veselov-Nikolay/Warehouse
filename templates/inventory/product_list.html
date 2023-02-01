@@ -23,7 +23,8 @@
     {% for product in products %}
     <tr>
 {#      <td>{{ product.id }}</td>#}
-        <td><a href="{% url 'product_detail' product.pk %}">{{ product.contract_number }}</a></td>
+        <td><a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a></td>
+        <td>{{ product.contract_number }}</td>
         <td>{{ product.client }}</td>
         <td>{{ product.arrival_date }}</td>
         <td>{{ product.contract_end_date }}</td>

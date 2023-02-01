@@ -5,11 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-{#сделать по центру и сделать кнопку назад на страницу с товарами и сделать кнопку редактировать на страницу редактирования товара и сделать кнопку удалить на страницу удаления товара и сделать кнопку добавить на страницу добавления товара #}
-
-{#  <h1>{{ product.contract_end_date }}</h1>#}
     <table>
   <tbody>
+   <tr>
+      <td>Имя</td>
+      <td>{{ product.name }}</td>
+    </tr>
+    <tr>
     <tr>
       <td>Высота</td>
       <td>{{ product.height }}</td>
@@ -53,6 +55,6 @@
     </tbody>
     </table>
 {#  <p>Высота: {{ product.height }} - Ширина: {{ product.width }} - Длина: {{ product.length }} - Вес: {{ product.weight }} - Дата прибытия: {{ product.arrival_date }} - Номер контракта: {{ product.contract_number }} - Имя: {{ product.client.name }} - Конец срока: {{ product.contract_end_date }} - Номер полки: {{ product.shelf.number }} - Позиция: {{ product.position }}</p>#}
-{% endblock %}
+{#{% endblock %}#}
 </body>
 </html>
