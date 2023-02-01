@@ -19,6 +19,17 @@
       <td>Bank Details</td>
       <td>{{ client.bank_details }}</td>
     </tr>
+    <tr>
+      <td>Товары</td>
+        <td>
+    <ul>
+{% for product in products %}
+   <li>  {{ product.name }} </li>
+{% endfor %}
+</ul>
+
+        </td>
+    </tr>
   </tbody>
 </table>
 </body>

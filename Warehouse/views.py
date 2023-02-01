@@ -25,7 +25,8 @@ def client_list(request):
 
 def client_detail(request, pk):
     client = get_object_or_404(Client, pk=pk)
-    return render(request, 'inventory/client_detail.html', {'client': client})
+    products = Product.objects.filter(client=client)
+    return render(request, 'inventory/client_detail.html', {'client': client, 'products': products})
 
 def product_list(request):
     products = Product.objects.all()
